@@ -42,12 +42,12 @@ function checkAnswer(currentLevel) {
     console.log("wrong");
     playSound("sounds/wrong.mp3")
 
-    $("body").addClass("think before u play");
+    $("body").addClass("error");
     setTimeout(function () {
-      $("body").removeClass("think before u play");
+      $("body").removeClass("error");
     }, 200);
 
-    $("#level-title").text("think before u play");
+    $("#level-title").text("error");
 
     startOver();
   }
