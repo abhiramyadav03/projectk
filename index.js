@@ -1,5 +1,5 @@
 //3. At the top of the game.js file, create a new array called buttonColours and set it to hold the sequence "red", "blue", "green", "yellow" .
-var buttonColours = ["red", "blue", "green", "yellow"];
+var buttonColours = ["green", "blue", "pink", "red"];
 
 //5. At the top of the game.js file, create a new empty array called gamePattern.
 var gamePattern = [];
@@ -70,13 +70,13 @@ function checkAnswer(currentLevel) {
       playSound("wrong");
 
       //2. In the styles.css file, there is a class called "game-over", apply this class to the body of the website when the user gets one of the answers wrong and then remove it after 200 milliseconds.
-      $("body").addClass("game-over");
+      $("body").addClass("error");
       setTimeout(function () {
-        $("body").removeClass("game-over");
+        $("body").removeClass("error");
       }, 200);
 
       //3. Change the h1 title to say "Game Over, Press Any Key to Restart" if the user got the answer wrong.
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("error, Press Any Key to Restart");
 
       //2. Call startOver() if the user gets the sequence wrong.
       startOver();
