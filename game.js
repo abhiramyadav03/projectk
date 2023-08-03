@@ -1,5 +1,5 @@
 
-var buttonColours = ["red", "blue", "green", "yellow"];
+var buttonColours = ["white", "blue", "pink", "yellow"];
 
 var gamePattern = [];
 var userClickedPattern = [];
@@ -42,12 +42,12 @@ function checkAnswer(currentLevel) {
     console.log("wrong");
     playSound("sounds/wrong.mp3")
 
-    $("body").addClass("game-over");
+    $("body").addClass("think before u play");
     setTimeout(function () {
-      $("body").removeClass("game-over");
+      $("body").removeClass("think before u play");
     }, 200);
 
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("think before u play");
 
     startOver();
   }
